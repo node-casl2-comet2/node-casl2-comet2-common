@@ -1,7 +1,6 @@
 "use strict";
 
 import { CommandLineOption } from "./options";
-import { getVersion } from "./util/version";
 import { pathToFileName } from "./util/path";
 import { sys, ExitStatus } from "./sys";
 import * as _ from "lodash";
@@ -49,11 +48,11 @@ export namespace CLI {
         }
     }
 
-    export function printAppInfo(appName: string) {
-        sys.stdout.writeLine(`${appName} v${getVersion()}`);
+    export function printAppInfo(appName: string, version: string) {
+        sys.stdout.writeLine(`${appName} v${version}`);
     }
 
-    export function printVersion() {
-        sys.stdout.writeLine(getVersion());
+    export function printVersion(version: string) {
+        sys.stdout.writeLine(`v${version}`);
     }
 }

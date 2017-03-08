@@ -1,7 +1,6 @@
 "use strict";
 
-export { pathToFileName } from "./util/path";
-export { getVersion } from "./util/version";
+export { pathToFileName, isValidInputSource } from "./util/path";
 
 export { CLI } from "./cli";
 export { ParsedCommandLine, parseCommandLine } from "./commandLine";
