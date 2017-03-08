@@ -1,0 +1,22 @@
+{
+	"compilerOptions": {
+		"module": "commonjs",
+		"target": "es6",
+		"outDir": "dist",
+		"moduleResolution": "node",
+		"inlineSourceMap": true,
+		"noImplicitAny": true,
+		"strictNullChecks": true,
+		"noImplicitReturns": true,
+		"noImplicitThis": true,
+		"forceConsistentCasingInFileNames": true,
+		"removeComments": false,
+		"preserveConstEnums": true,
+		// 型定義ファイルを生成する
+		"declaration": true
+	},
+	"exclude": [
+		"node_modules",
+		"dist"
+	]
+}

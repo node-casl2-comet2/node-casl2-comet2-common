@@ -1,0 +1,29 @@
+{
+  "name": "@maxfield/node-casl2-comet2-common",
+  "version": "0.0.3",
+  "description": "",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "author": "Maxfield Walker",
+  "license": "MIT",
+  "scripts": {
+    "start": "npm run compile && node .",
+    "compile": "node ./node_modules/typescript/bin/tsc -p .",
+    "watch": "node ./node_modules/typescript/bin/tsc -w -p .",
+    "run": "npm run compile && node ./dist/src/app.js",
+    "test": "npm run compile && mocha",
+    "coverage": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report none -- --ui tdd ./dist/test/**/*.js",
+    "prepublish": "npm run compile"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.54",
+    "@types/mocha": "^2.2.32",
+    "@types/node": "^6.0.40",
+    "istanbul": "^0.4.5",
+    "mocha": "^2.3.3",
+    "typescript": "^2.2.1"
+  }
+}
