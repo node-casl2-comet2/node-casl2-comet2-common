@@ -4,14 +4,14 @@ import { CommandLineOption, CommandLineOptions } from "./options";
 
 export interface ParsedCommandLine<T extends CommandLineOptions> {
     options: T;
-    fileNames: Array<string>;
-    errors: Array<string>;
+    fileNames: string[];
+    errors: string[];
 }
 
-export function parseCommandLine<T extends CommandLineOptions>(commandLine: Array<string>, commandLineOptions: Array<CommandLineOption>): ParsedCommandLine<T> {
-    const errors: Array<string> = [];
+export function parseCommandLine<T extends CommandLineOptions>(commandLine: string[], commandLineOptions: CommandLineOption[]): ParsedCommandLine<T> {
+    const errors: string[] = [];
     const options: CommandLineOptions = {};
-    const fileNames: Array<string> = [];
+    const fileNames: string[] = [];
 
     const shortToFullNameMap = new Map<string, string>();
     const commandLineOptionMap = new Map<string, CommandLineOption>();

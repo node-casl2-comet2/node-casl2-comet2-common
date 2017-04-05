@@ -7,10 +7,10 @@ import { CommandLineOption, CommandLineOptions } from "../src/options";
 
 suite("parse command line test", () => {
     interface TestCommandLineOptions extends CommandLineOptions {
-        version?: boolean
+        version?: boolean;
     }
 
-    const commandLineOptions: Array<CommandLineOption> = [
+    const commandLineOptions: CommandLineOption[] = [
         {
             name: "version",
             shortName: "v",

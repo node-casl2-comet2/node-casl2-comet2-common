@@ -6,11 +6,11 @@ import { sys, ExitStatus } from "./sys";
 import * as _ from "lodash";
 
 export namespace CLI {
-    export function printHelp(commandLineOptions: Array<CommandLineOption>) {
-        const output: Array<string> = [];
+    export function printHelp(commandLineOptions: CommandLineOption[]) {
+        const output: string[] = [];
 
-        const optionColumn: Array<string> = [];
-        const descriptionColumn: Array<string> = [];
+        const optionColumn: string[] = [];
+        const descriptionColumn: string[] = [];
         let marginLength = 0;
 
         const sortedCommandLineOptions = commandLineOptions.sort((a, b) => {
@@ -25,7 +25,7 @@ export namespace CLI {
             if (opt.shortName) {
                 option += `-${opt.shortName}, `;
             }
-            option += `--${opt.name}`
+            option += `--${opt.name}`;
 
             optionColumn.push(option);
             descriptionColumn.push(opt.description);

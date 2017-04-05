@@ -21,9 +21,9 @@ export const sys = {
     },
 
     exit(exitCode?: number) {
-        process.exit(exitCode)
+        process.exit(exitCode);
     }
-}
+};
 
 export enum ExitStatus {
     Success = 0,
